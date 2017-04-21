@@ -1,0 +1,13 @@
+<h1>
+  {{title}}
+</h1>
+
+<input type="text" (keyup)=0 #search>
+<br>
+<br>
+search: {{search.value}}
+<ul>
+    <li *ngFor="let post of (postData | search:search.value)">
+        <app-mypost [data]="post"></app-mypost>
+    </li>
+</ul>
